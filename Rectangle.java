@@ -14,30 +14,30 @@ class Rectangle {
     
     double calcDiag(double a, double b){
         double out = Math.hypot(a, b);
-        return Math.round(out * 100) / (double)100;
+        return Math.round(out * 1000) / (double)1000;
     }
 
     double sideFromS(double S, double a){
         double out = S/a;
-        return Math.round(out * 100) / (double)100;
+        return Math.round(out * 1000) / (double)1000;
     }
 
     double sideFromP(double p, double a){
         double out = p / 2 - a;
-        return Math.round(out * 100) / (double)100;
+        return Math.round(out * 1000) / (double)1000;
     }
 
     double calcSide(double d, double a){
         double out = Math.sqrt(d * d - a * a);
-        return Math.round(out * 100) / (double)100;
+        return Math.round(out * 1000) / (double)1000;
     }
 
     double calcP(double a, double b){
         double out = 2 * a + 2 * b;
-        return Math.round(out * 100) / (double)100;
+        return Math.round(out * 1000) / (double)1000;
     }
 
     double calcS(double a, double b){
-        return Math.round(a * b * 100) / (double)100;
+        return Math.round(a * b * 1000) / (double)1000;
     }
 }

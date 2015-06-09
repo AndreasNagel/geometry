@@ -26,47 +26,47 @@ class Trapezoid {
 
     double bFromA(double a, double x, double y){
         double out = a + x + y;
-        return Math.round(out * 100) / (double)100;
+        return Math.round(out * 1000) / (double)1000;
     }
 
     double calcAXY(double a, double b, double c){
         double out = a - b - x;
-        return Math.round(out * 100) / (double)100;
+        return Math.round(out * 1000) / (double)1000;
     }
 
     double calcHeightbySides(double a, double b, double c, double d){
         double helper = (a - b + c - d) * (a - b - c + d) * (a - b + c + d) * (b - a + c + d);
         helper = Math.sqrt(helper);
         double out = helper / (2 * (b - a));
-        return Math.round(out * 100) / (double)100;
+        return Math.round(out * 1000) / (double)1000;
     }
 
     double calcCosAngle(double c, double b){
         double out = Math.acos(b/c);
-        return Math.round(out * 10000) / (double)10000;
+        return Math.round(out * 100000) / (double)100000;
     }
 
     double calcAngle(double c, double a){
         double out = Math.asin(a/c);
-        return Math.round(out * 100) / (double)100;
+        return Math.round(out * 1000) / (double)1000;
     }
 
     double calcArea(double a, double b, double h){
         double out = (a + b) / 2 * h;
-        return Math.round(out * 100) / (double)100;
+        return Math.round(out * 1000) / (double)1000;
     }
     double calcHeight(double c, double b){
         double out = Math.sqrt(c*c - b*b);
-        return Math.round(out * 100) / (double)100;
+        return Math.round(out * 1000) / (double)1000;
     }
 
     double calcSide(double a, double b){
         double out = Math.hypot(a, b);
-        return Math.round(out * 100) / (double)100;
+        return Math.round(out * 1000) / (double)1000;
     }
 
     double perimeter(double a, double b, double c, double d){
         double out = a + b + c + d;
-        return Math.round(out * 100) / (double)100;
+        return Math.round(out * 1000) / (double)1000;
     }
 }
