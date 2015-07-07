@@ -24,49 +24,58 @@ class Trapezoid {
     a, b, h -> S {calcArea};
     }@*/
 
+    double roundIt(double x){
+        double div = 1;
+        while(x<1000){
+            x *= 10;
+            div *=10;
+        }
+        return Math.round(x)/div;
+    }
+
     double bFromA(double a, double x, double y){
         double out = a + x + y;
-        return Math.round(out * 1000) / (double)1000;
+        return roundIt(out);
     }
 
     double calcAXY(double a, double b, double c){
-        double out = a - b - x;
-        return Math.round(out * 1000) / (double)1000;
+        double out = a - b - c;
+        return roundIt(out);
     }
 
     double calcHeightbySides(double a, double b, double c, double d){
         double helper = (a - b + c - d) * (a - b - c + d) * (a - b + c + d) * (b - a + c + d);
         helper = Math.sqrt(helper);
         double out = helper / (2 * (b - a));
-        return Math.round(out * 1000) / (double)1000;
+        return roundIt(out);
     }
 
     double calcCosAngle(double c, double b){
         double out = Math.acos(b/c);
-        return Math.round(out * 100000) / (double)100000;
+        return roundIt(out);
     }
 
     double calcAngle(double c, double a){
         double out = Math.asin(a/c);
-        return Math.round(out * 1000) / (double)1000;
+        return roundIt(out);
     }
 
     double calcArea(double a, double b, double h){
         double out = (a + b) / 2 * h;
-        return Math.round(out * 1000) / (double)1000;
+        return roundIt(out);
     }
     double calcHeight(double c, double b){
         double out = Math.sqrt(c*c - b*b);
-        return Math.round(out * 1000) / (double)1000;
+        return roundIt(out);
     }
 
     double calcSide(double a, double b){
         double out = Math.hypot(a, b);
-        return Math.round(out * 1000) / (double)1000;
+        return roundIt(out);
     }
 
     double perimeter(double a, double b, double c, double d){
         double out = a + b + c + d;
-        return Math.round(out * 1000) / (double)1000;
+        return roundIt(out);
     }
 }
